@@ -101,7 +101,7 @@ if(isset($_POST['action'])) {
                     que seas parte de ello.</p>
 
                     <br>
-                    <p>La rifa sera el dia 20 de Diciembre a las 5:00 AM</p>
+                    <p>La rifa sera el dia 21 de Diciembre a las 5:00 AM</p>
                     <p>Tiempo restante para la rifa</p>
                 <div id="conteo">
                     <ul id="countdown">
