@@ -165,6 +165,32 @@ h5 {
 h6 {
   font-size: 0.7rem; }
 
+.floatMsj{
+    position: fixed;
+    top: 48px;
+    z-index: 100;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    padding: 15px 0px;
+    text-shadow:1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.info{
+    background-color: #51d4f3;
+    color: white;
+}
+
+.success{
+    background-color: #34a768;
+    color: white;
+}
+
+.danger{
+    background-color: #bc3339;
+    color: white;
+}
+
 @media screen and (max-width: 736px) {
   h1 {
     font-size: 2.75rem;
