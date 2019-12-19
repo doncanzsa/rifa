@@ -18,7 +18,7 @@ if(isset($_POST['action'])) {
     $objeto= new conexion();
     $objeto->conectar();
 
-    $user = htmlspecialchars($_POST["user"], ENT_QUOTES);
+    $user = strtolower(htmlspecialchars($_POST["user"], ENT_QUOTES));
     $pass = md5(htmlspecialchars($_POST["pass"], ENT_QUOTES));
 
     $query=$objeto->mantto("Select * from usuarios WHERE user_u='".$user."'");
@@ -37,9 +37,11 @@ if(isset($_POST['action'])) {
             } else {
                 $data = $objeto->arreglo($querySearch);
                 $_SESSION['rifa']['session']        = "ok";
+                $_SESSION['rifa']['id_usuario']     = $data['id_usuario'];
                 $_SESSION['rifa']['user']           = $data['user_u'];
                 $_SESSION['rifa']['nombre']         = $data['nombre'];
                 $_SESSION['rifa']['sexo']           = $data['sexo'];
+                $_SESSION['rifa']['imagen']         = $data['imagen'];
                 $_SESSION['rifa']['msj']            = "Te has registrado con exito";
                 $_SESSION['rifa']['msjClass']       = "success";
             }
@@ -60,9 +62,11 @@ if(isset($_POST['action'])) {
             } else {
                 $data = $objeto->arreglo($querySearch);
                 $_SESSION['rifa']['session']        = "ok";
+                $_SESSION['rifa']['id_usuario']     = $data['id_usuario'];
                 $_SESSION['rifa']['user']           = $data['user_u'];
                 $_SESSION['rifa']['nombre']         = $data['nombre'];
                 $_SESSION['rifa']['sexo']           = $data['sexo'];
+                $_SESSION['rifa']['imagen']         = $data['imagen'];
                 $_SESSION['rifa']['msj']            = "Bienvenido ".$data['user_u'];
                 $_SESSION['rifa']['msjClass']       = "success";
             }
@@ -169,25 +173,7 @@ if(isset($_POST['action'])) {
     </section>
 
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="inner">
-            <div class="content">
-                <section>
-                    <h4>Nuestros mejores deseos para ti</h4>
-                    <p>
-                        Que la alegría de las fiestas se repitan todos los días del nuevo año que está por venir.
-                        <br>Que la felicidad sea tu meta de cada día, y el amor de los tuyos, tu mejor recompensa.
-                    </p>
-                </section>
-            </div>
-            <div class="copyright">
-                &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a
-                    href="https://coverr.co">Coverr</a>.
-                <br> Created By Doncans
-            </div>
-        </div>
-    </footer>
+    <?php footerHtml(); ?>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -259,7 +245,7 @@ if(isset($_POST['action'])) {
             });
 
             setTimeout(function () {
-                $(".floatMsj").fadeOut();
+                $(".float_msj").fadeOut();
             }, 2000);
 
             $("#btnReg").click(function (event) {

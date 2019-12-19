@@ -1,5 +1,5 @@
 <?php
-$server_local=true;
+$server_local=false;
 
 if ($server_local) {
     return array(
@@ -14,9 +14,9 @@ if ($server_local) {
     return array(
         "driver"    =>"mysql",
         "host"      =>"localhost",
-        "user"      =>"root",
-        "pass"      =>"Administrador 2019",
-        "db"        =>"cedart_store",
+        "user"      =>"id11997907_rifa",
+        "pass"      =>"rifa2019",
+        "db"        =>"id11997907_rifa",
         "charset"   =>"utf8mb4"
     );
 }
