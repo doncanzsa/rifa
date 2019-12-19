@@ -1,0 +1,58 @@
+/**********************************************************************************
+
+	Project Name:
+	Project Description:
+	File Name:
+	Author: Adi Purdila
+	Author URI: http://www.adipurdila.com
+	Version: 1.0.0
+
+**********************************************************************************/
+/* ---------- TYPOGRAPHY ---------- */
+/* ---------- LAYOUT ---------- */
+.container {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.timer-area {
+  background: transparent url('../images/timer-area-pattern.png') left top;
+  text-align: center;
+  padding-top: 2em;
+  margin-bottom: 4em;
+}
+.timer-area h1 {
+  color: white;
+}
+/* ---------- TIMER ---------- */
+ul#countdown li {
+  display: inline-block;
+  background: transparent url('../images/timer-piece.png') no-repeat left top;
+  width: 104px;
+  margin-bottom: 4em;
+  text-align: center;
+}
+ul#countdown li span {
+  font-size: 3em;
+  font-weight: bold;
+  color: #1f2225;
+  height: 108px;
+  line-height: 108px;
+  position: relative;
+}
+ul#countdown li span::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 31px;
+}
+ul#countdown li p.timeRefDays,
+ul#countdown li p.timeRefHours,
+ul#countdown li p.timeRefMinutes,
+ul#countdown li p.timeRefSeconds {
+  margin-top: 1em;
+  color: #909091;
+  text-transform: uppercase;
+  font-size: .875em;
+}
