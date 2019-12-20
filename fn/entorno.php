@@ -19,7 +19,7 @@ function menu() {
     ?>
     <!-- Header -->
     <header id="header">
-        <a class="logo" href="index.html">Feliz Navidad</a>
+        <a class="logo" href="index.php">Feliz Navidad</a>
         <nav>
             <a href="#menu">Menu</a>
         </nav>

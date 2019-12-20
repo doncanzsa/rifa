@@ -105,7 +105,7 @@ if(isset($_POST['action'])) {
                     que seas parte de ello.</p>
 
                     <br>
-                    <p>La rifa sera el dia 21 de Diciembre a las 5:00 AM</p>
+                    <p>La rifa sera el dia 20 de Diciembre a las 5:00 AM</p>
                     <p>Tiempo restante para la rifa</p>
                 <div id="conteo">
                     <ul id="countdown">
@@ -149,7 +149,7 @@ if(isset($_POST['action'])) {
                             <br> -->
                             <input type="hidden" name="action" id="action" value="">
 
-                            <input type="button" id="btnReg" name="btnReg" class="button primary" value="Registrarse">
+                            <!-- <input type="button" id="btnReg" name="btnReg" class="button primary" value="Registrarse"> -->
 
                             <input type="button" id="btnlogin" name="btnlogin" class="button" value="Iniciar Sesion">
 
