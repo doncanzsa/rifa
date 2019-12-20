@@ -42,6 +42,7 @@ if(isset($_POST['action'])) {
                 $_SESSION['rifa']['nombre']         = $data['nombre'];
                 $_SESSION['rifa']['sexo']           = $data['sexo'];
                 $_SESSION['rifa']['imagen']         = $data['imagen'];
+                $_SESSION['rifa']['asigned']        = $data['asigned'];
                 $_SESSION['rifa']['msj']            = "Te has registrado con exito";
                 $_SESSION['rifa']['msjClass']       = "success";
             }
@@ -67,6 +68,7 @@ if(isset($_POST['action'])) {
                 $_SESSION['rifa']['nombre']         = $data['nombre'];
                 $_SESSION['rifa']['sexo']           = $data['sexo'];
                 $_SESSION['rifa']['imagen']         = $data['imagen'];
+                $_SESSION['rifa']['asigned']        = $data['asigned'];
                 $_SESSION['rifa']['msj']            = "Bienvenido ".$data['user_u'];
                 $_SESSION['rifa']['msjClass']       = "success";
             }

@@ -89,6 +89,45 @@ valLogin();
 			<section id="main" class="wrapper">
 				<div class="inner">
 					<div class="content">
+					<?php
+					if (isset($_SESSION['rifa']['asigned'])) {
+						$queryAmigo = $objeto->mantto("Select * from usuarios WHERE id_usuario=".$_SESSION['rifa']['asigned']);
+						$dataAmigo  = $objeto->arreglo($queryAmigo);
+						?>
+						<header>
+							<h2  style="text-align: center;">Tu Amigo secreto es</h2>
+						</header>
+						<div class="imaUser">
+							<?php
+							if ($dataAmigo['imagen']!="") {
+								?><div class="image_round" style="background-image: url(images/users/<?php echo $dataAmigo['imagen']; ?>)"></div><?php
+							} else if ($dataAmigo['sexo']=="2") {
+								?><div class="image_round" style="background-image: url(images/icon-Mujer.png)"></div><?php
+							} else {
+								?><div class="image_round" style="background-image: url(images/icon-Hombre.png)"></div><?php
+							}
+							?>
+						</div>
+						<header>
+							<h3  style="text-align: center;">
+							<?php echo "<b>".$dataAmigo['user_u']."</b> , " . $dataAmigo['nombre'];?>
+							</h3>
+							<p><?php echo $dataAmigo['desc_usuario']; ?></p>
+						</header>
+						<hr />
+						<?php
+					} else {
+						?>
+						<header>
+							<h2  style="text-align: center; color: red;">
+							<b>Para conocer a tu amigo secreto, cierra session y vuelve a iniciar</b>
+							</h2>
+						</header>
+						<?php
+					} ?>
+					</div>
+
+					<div class="content">
 						<div class="imaUser">
 							<?php
 							if ($_SESSION['rifa']['imagen']!="") {
